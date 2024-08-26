@@ -1,0 +1,10 @@
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin:0px;
+}
+.search-bar-container{
+  padding-top: 20px;
+  width:40%;
+  margin:auto;
+}
