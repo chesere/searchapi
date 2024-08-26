@@ -8,7 +8,10 @@ export const SearchBar = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
+        const result = json.filter((user) => {
+          return user && user.name && user.name.toLowerCase().includes(value);
+        });
+        console.log(result);
       });
   };
   const handleChange = (value) => {
@@ -21,7 +24,7 @@ export const SearchBar = () => {
       <input
         placeholder="type to search"
         value={input}
-        onChange={(e) => setInput(e.target.value)}
+        onChange={(e) => handleChange(e.target.value)}
       />
     </div>
   );
