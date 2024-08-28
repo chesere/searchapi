@@ -24,7 +24,7 @@ export const SearchBar = ({ setResults }) => {
     fetchData(value);
   };
   return (
-    <div className="input-wrap">
+    <div className="input-wrapper">
       <FaSearch id="search-icon" />
       <input
         placeholder="type to search"
